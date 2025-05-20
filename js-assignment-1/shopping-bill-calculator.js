@@ -15,21 +15,21 @@ var totalPrice = totalLaptopPrice + totalHeadPhonePrice + totalSmartPhonePrice
 
 if (totalPrice > 5000){
     discountedPrice = totalPrice * 0.2
-    alert(`This the total price of your items : ${totalPrice}
-This is the discount on your products : ${discountedPrice}
-Amount to pay : ${totalPrice - discountedPrice}
-        `)
+    document.write(`This the total price of your items : <b>${totalPrice}</b>  <br/>
+    This is the discount on your products : ${discountedPrice} <br/>
+    Amount to pay : ${totalPrice - discountedPrice} <br/>
+    `)
 }
 else if( totalPrice > 3000 && totalPrice < 5000 ){
     discountedPrice = totalPrice * 0.15
-    alert(`This the total price of your items : ${totalPrice}
-This is the discount on your products : ${discountedPrice}
-Amount to pay : ${totalPrice - discountedPrice}
-        `)
+    document.write(`This the total price of your items : <b>${totalPrice}</b>  <br/>
+    This is the discount on your products : ${discountedPrice} <br/>
+    Amount to pay : ${totalPrice - discountedPrice} <br/>
+    `)
+    
 }
 else {
-    alert(`This the total price of your items : ${totalPrice}
-
-Amount to pay : ${totalPrice }
-        `)
+    document.write(`This the total price of your items : <b>${totalPrice}</b>  <br/>
+    Amount to pay : ${totalPrice }
+    `)
 }
