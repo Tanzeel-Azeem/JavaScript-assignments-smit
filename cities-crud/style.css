@@ -1,0 +1,101 @@
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 2rem;
+    width: 300px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #0051ff;
+    border-radius: 4px;
+    font-size: 1rem;
+    /* color: #0051ff; */
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #0051ff;
+}
+
+.input-label {
+    position: absolute;
+    left: 1rem;
+    top: 0.7rem;
+    color: #0051ff;
+    font-size: 20px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 0 0.3rem;
+}
+
+.input-field:focus+.input-label,
+.input-field:not(:placeholder-shown)+.input-label {
+    transform: translateY(-1.3rem) scale(0.8);
+    color: #0051ff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button{
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #0051ff;
+    background-color: aliceblue;
+    border-radius: 5px;
+
+}
+
+.btn button:hover{
+    background-color: #0051ff;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    padding: 15px 5px;
+    margin: 5px;
+    border: 1px solid #0051ff;
+    width: 400px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+}
+ul li:hover{
+    background-color: #467bec;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.svg{
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+}   
+.svg1{
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+}   
