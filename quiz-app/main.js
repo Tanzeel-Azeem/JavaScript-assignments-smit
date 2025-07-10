@@ -62,10 +62,14 @@ const questions = [
 ]
 let currentQuestionIndex = 0
 let score = 0
+let restartQuizButton = document.getElementById("restartQuiz");
+let quizOptionContainer = document.getElementById("options");
+let nextButton = document.getElementById("nextButton");
+let result = document.getElementById("result");
 
 function showQuestion(){
     var questionElement = document.getElementById("question");
-    questionElement.innerHTML = questions[currentQuestionIndex].question;
+    questionElement.innerHTML =`${currentQuestionIndex + 1}.  ${questions[currentQuestionIndex].question}`;
 
     var optionElement = document.getElementById("options")
     optionElement.innerHTML = "";
@@ -109,8 +113,9 @@ function nextQuestion(){
 
 function finishQuiz(){
     document.getElementById("question").innerHTML = "Quiz Completed! ✨🎉";
-    document.getElementById("options").innerHTML = "";
-    document.getElementById("nextButton").remove();
+    quizOptionContainer.style.display = "none";
+    nextButton.style.display = "none";
+    restartQuizButton.style.display = "block";
    
     var result = document.getElementById("result")
     result.innerHTML = `🎉 Your final score is ${score} out of ${questions.length}.`;
@@ -124,3 +129,14 @@ function finishQuiz(){
     }
 }
 
+function restartQuiz(){
+    quizOptionContainer.style.display = "block";
+    currentQuestionIndex = 0
+    showQuestion()
+    score = 0
+    nextButton.style.display = "block"
+    restartQuizButton.style.display = "none";
+    result.innerHTML = "The score will be Calculated at the End!";
+    result.style.backgroundColor = "lightgray"
+
+}

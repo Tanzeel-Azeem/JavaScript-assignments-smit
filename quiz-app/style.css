@@ -29,7 +29,7 @@ body{
 }
 
 #nextButton{
-    background-color: #4CAF50; /* Green */;
+    background-color: #4CAF50;;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -37,6 +37,9 @@ body{
     border-radius: 10px;
     margin-top: 20px;
     cursor: pointer;    
+}
+#nextButton:hover{
+    background-color: #27682b; 
 }
 
 .result{
@@ -46,4 +49,24 @@ body{
     border-radius: 6px;
     background-color: lightgray;
 
+}
+
+.restart-quiz{
+    display: none;
+}
+
+
+.restart-quiz button{
+    
+    background-color: #4CAF50; ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer; 
+}
+.restart-quiz button:hover{
+    background-color: #27682b; 
 }
