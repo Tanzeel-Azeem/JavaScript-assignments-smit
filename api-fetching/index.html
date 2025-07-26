@@ -1,19 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glam & Groceries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-   
-    <div style="display: flex;flex-wrap: wrap; gap: 10px; justify-content: center;" id="cards">
-        
-    </div>
-    <script src="index.js"></script>
-</body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar {
+  background-color: #f0f0f0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff1493;
+}
+
+.auth-buttons .btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login {
+  background-color: transparent;
+  border: 1px solid #000;
+  font-size: 17px;
+}
+
+.register {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.register:hover, .login:hover {
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://media.istockphoto.com/id/1328679169/photo/enjoying-music-young-beautiful-caucasian-girl-in-headphones-and-bright-sunglasses-isolated-on.jpg?s=612x612&w=0&k=20&c=OUNlRc7nTbvpyQ-Xgm3QE34kejJXpUMjQo6bqbjJ9F8=');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.hero-content {
+  max-width: 600px;
+  animation: slideUp 1s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.images img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1.5s forwards;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f0f0;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 908px) {
+  .nav-links {
+    display: none;
+  }
+  .login{
+    font-size: 14px;
+  }
+  .register{
+    font-size: 14px;
+  }
+  .navbar{
+    padding: 10px 2px;
+  }
+
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .logo{
+    font-size: 16px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .auth-buttons {
+    margin-left: auto;
+  }
+}
+
+    </style>
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Glam & Groceries</div>
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <a href="/login.html"><button class="btn login">Login</button></a>
+      <a href="/register.html"><button class="btn register">Register Now</button></a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Your One-Stop Shop for Glam & Essentials</h1>
+      <p>Discover top-notch beauty products & daily groceries — all in one place.</p>
+      <a href="login.html"><button class="btn shop-btn">Shop Now</button></a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p class="fade-in">
+      At Glam & Groceries, we believe every woman deserves the best of both worlds: beauty and convenience. Whether you're looking for premium mascara or everyday grocery items, we bring it all to your doorstep with style.
+    </p>
+    <div class="images">
+      <img src="https://artdeco.com/cdn/shop/collections/Kategoriebanner-Mascara.jpg?v=1720441496&width=1024" alt="Mascara">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/healthy-groceries-bag-66eaef810acf6.jpg?crop=0.7501082719792118xw:1xh;center,top&resize=1200:*" alt="Groceries">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: glamgroceries@example.com</p>
+    <p>Instagram: @glamgroceries</p>
+    <p>Phone: +92 300 1234567</p>
+  </footer>
+
+</body>
 </html>

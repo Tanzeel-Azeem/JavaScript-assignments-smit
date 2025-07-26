@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+</style>
+<body>
+    <nav class="navbar-product">
+    <div class="logo">Glam & Groceries</div>
+    
+    <div class="login-user-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="40" height="40" alt="User Photo" class="user-photo">
+
+        <div class="user-info">
+            <p>Name : <span id="user-info-name"></span></p>
+            <p>Email : <span id="user-info-email"></span></p>
+            <button class="logout-button" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+  </nav>
+
+
+    <div style="display: flex;flex-wrap: wrap; gap: 10px; justify-content: center;" id="cards">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
